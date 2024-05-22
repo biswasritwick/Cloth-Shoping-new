@@ -1,0 +1,18 @@
+<body class="website-layout body">
+    <app-admin-header (navStatus)="navstatus=$event"></app-admin-header>
+    <app-admin-navbar [ngClass]="{'app-nav':navstatus}"></app-admin-navbar>
+    <div class="website-layout-content" [ngClass]="{'main-content':navstatus}">
+        <!-- <app-searchbar></app-searchbar> -->
+        <router-outlet></router-outlet>
+    </div>
+    <app-admin-footer [ngClass]="{'footer-size':navstatus}"></app-admin-footer>
+</body>
+<!-- <body class="website-layout body">
+    <app-admin-header (navStatus)="navstatus=$event"></app-admin-header>
+    <app-navbar [ngClass]="{'app-nav':navstatus}"></app-navbar>
+    <div class="website-layout-content" [ngClass]="{'main-content':navstatus}">
+        <app-searchbar></app-searchbar>
+        <router-outlet></router-outlet>
+    </div>
+    <app-admin-footer [ngClass]="{'footer-size':navstatus}"></app-admin-footer>
+</body> -->

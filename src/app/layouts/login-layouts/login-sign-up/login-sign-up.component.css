@@ -1,0 +1,121 @@
+#main {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+.login-background-img-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    width: 350px;
+    /* height:auto; */
+
+    max-height: 500px;
+    min-height: 350px;
+    /* border: 1px solid black; */
+    background-color: #ffffff56;
+    border-radius: 5px;
+
+}
+
+.login-form-inner,form {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.login-title {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+
+}
+
+.form-input {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+
+    input {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        /* border-color: rgb(126, 123, 123); */
+        border: none;
+        border-color: #e2e2e2;
+        font-size: 1rem;
+        outline: none;
+        box-shadow: none;
+        padding: 10px 8px;
+        text-transform: capitalize;
+
+    }
+}
+
+.form-button {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    /* border: 1px solid #8e8e8e; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+        color: #000;
+        background-color: transparent;
+        border-color: #8e8e8e;
+        padding: 10px 28px;
+        text-transform: capitalize;
+
+    }
+    button{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+        color: #000;
+        background-color: transparent;
+        border-color: #8e8e8e;
+        border: none;
+        padding: 10px 28px;
+        text-transform: capitalize; 
+    }
+
+    
+}
+.form-button:hover {
+    background-color: #f6f6f666;
+
+}
+.form-link{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    a{
+        width: 100%;
+        height: 100%;
+        text-transform: capitalize;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}

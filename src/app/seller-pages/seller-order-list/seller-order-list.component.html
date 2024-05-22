@@ -1,0 +1,57 @@
+<div id="main">
+    <div class="shopping-cart">
+
+        <div class="column-labels">
+            <div class="column-labels-inner">
+
+                <label class="product-image">Id</label>
+                <label class="product-details">Product</label>
+                <label class="product-price">Price</label>
+                <label class="product-quantity">Quantity</label>
+                <label class="product-removal">Responce</label>
+                <label class="product-line-price">Total</label>
+            </div>
+        </div>
+        <div class="products">
+            <div class="products-inner">
+                <div class="product" *ngFor="let i of coustomerOrderedProduts; index as a">
+
+                    <div class="product-image">
+                        <div class="product-title">{{i.id}}</div>
+
+                    </div>
+                    <div class="product-details">
+                        <div class="product-title">{{i.product_name}}</div>
+                        <p class="product-description"></p>
+
+                    </div>
+                    <div class="product-price">{{i.product_price}}</div>
+                    <div class="product-quantity">
+                        <!-- <input type="number" value="2" min="1"> -->
+                        {{i.quantity}}
+                    </div>
+                    <div class="product-removal">
+
+
+                        <!-- <button class="remove-product" style="background-color: green;"
+                            [routerLink]="['/seller/seller-orderList-details',i.id]">View</button> -->
+                      
+                        <button class="remove-product" style="background-color: green;"  (click)="addcptProduct(i.id)" >
+                            accept
+                        </button>
+                        &nbsp;
+                        <button class="remove-product"   (click)="rejectProduct(i.id)" >
+                            reject
+                        </button>
+                    </div>
+                    <div class="product-line-price">{{i.product_price*i.quantity}}</div>
+                    
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------------ -->
+               
+
+            </div>
+        </div>
+    </div>
+</div>

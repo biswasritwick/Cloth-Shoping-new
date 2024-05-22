@@ -1,0 +1,48 @@
+#main{
+    max-width: 100%;
+}
+.navitems{
+    width: 90%;
+    display: inline-block;
+    margin: 0 auto;
+
+}
+.navitem-ul{
+    padding: 0; 
+    margin: 0; 
+
+}
+.navitem-li{
+    padding: 11px;
+    text-transform: capitalize;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 13px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+
+}
+.navitem-li:active{
+background-color: #e53b3b;
+
+}
+.navitem-li:hover{
+box-shadow: 3px 5px 15px #5e5c9a1f;
+
+
+}
+.navitem-a:active{
+    color: #ffffff;
+
+}
+.navitem-a{
+    text-decoration: none;
+color: #707070;
+padding:7px 72px 7px 20px;
+}
+.navitem-a>i{
+    padding: 5px;
+    font-size: 1.1rem;
+
+
+}

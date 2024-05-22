@@ -1,0 +1,21 @@
+<div id="main" [ngSwitch]="menuType">
+    <div class="navitems" *ngSwitchCase="'default'">
+        <ul class="navitem-ul">
+            <li class="navitem-li" title="{{navitem.name}}" *ngFor="let navitem of navitems">
+                <a class="navitem-a active" routerLink="{{navitem.routlink}}">
+                    <i class="{{navitem.icon}}"></i>
+                    {{navitem.name}}
+                </a>
+
+
+            </li>
+            <li class="navitem-li">
+                <a class="navitem-a active" style="text-transform: capitalize;" (click)="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    log out</a>
+
+            </li>
+        </ul>
+
+    </div>
+</div>

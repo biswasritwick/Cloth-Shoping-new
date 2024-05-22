@@ -1,0 +1,9 @@
+<body class="website-layout body">
+    <app-seller-header (navStatus)="navstatus=$event"></app-seller-header>
+    <app-seller-navbar [ngClass]="{'app-nav':navstatus}"></app-seller-navbar>
+    <div class="website-layout-content" [ngClass]="{'main-content':navstatus}">
+        <!-- <app-searchbar></app-searchbar> -->
+        <router-outlet></router-outlet>
+    </div>
+    <app-seller-footer [ngClass]="{'footer-size':navstatus}"></app-seller-footer>
+</body>

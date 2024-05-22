@@ -1,0 +1,55 @@
+<div id="user-main">
+    <div class="user-filter">
+        <div class="user-filter-inner">
+            <div class="filter-search">
+                <input type="search" placeholder="Search...">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="filter-title">
+                <p>coustomer list</p>
+            </div>
+     
+
+
+        </div>
+    </div>
+    <div class="user-list">
+        <div class="user-list-inner">
+            <div class="table">
+                <table class="user-table-inner">
+                    <thead>
+                        <tr>
+                            <th>id  </th>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>contact</th>
+                            <th>password</th>
+                            <th>action</th>
+                           
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let Coustomer of Coustomers"> 
+                            <td>{{Coustomer.id}}</td>
+                            <td>{{Coustomer.name}}</td>
+                            <td>{{Coustomer.email}}</td>
+                            <td>{{Coustomer.contact}}</td>
+                            <td>{{Coustomer.password}}</td>
+                            
+                            <td>
+                                <a style="color: #000;" title="Profile">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                &nbsp;
+                              
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination"></div>
+        </div>
+    </div>
+</div>

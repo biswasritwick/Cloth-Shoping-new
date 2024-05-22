@@ -1,0 +1,158 @@
+#add-user-main {
+    max-width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+
+overflow: hidden;
+}
+
+.add-user-inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.basic-information {
+
+    max-width: 100%;
+    height: 550px;
+
+}
+
+.basic-information-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    /* border: 1px solid black; */
+    background-color: #f3c7c7;
+
+}
+
+.basic-information-form {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: calc(100% - 50px);
+    flex: 5;
+}
+
+#information-form {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.information-input {
+    width: 32%;
+    height: 70px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 5px;
+    /* border: 1px solid rgb(0, 0, 0); */
+
+}
+
+.information-input>input {
+    width: 100%;
+    height: 60%;
+    border: none;
+    border-radius: 7px;
+    padding: 15px;
+    /* border-radius: 7px; */
+    border: 1px solid rgb(121, 118, 118);
+
+}
+
+/* permission */
+
+.permission {
+    width: 100%;
+    height: 35%;
+    /* border: 1px solid black; */
+    overflow: hidden;
+
+}
+
+.permission-info {
+    width: 100%;
+    height: 46px;
+    /* border: 1px solid black; */
+    background-color: #f3c7c7;
+    display: flex;
+    align-items: center;
+}
+
+.permission-select {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.permission-tag{
+    width: 100px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    flex: 1;
+
+}
+.permission-select-option {
+    /* border: 1px solid black; */
+    display: flex;
+    width: calc(100% - 100px);
+    height:30px;
+    /* flex: 10; */
+}
+.checkbox{
+    width: 130px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 14px 0px 13px;
+
+}
+.checkbox>input{
+  margin: 0px 14px 0px 13px;
+
+}
+.formbtn{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    height:auto;
+    align-items: center;
+/* background-color: blue; */
+}
+.formbtn>button{
+width: 90px;
+height: 43px;
+right: 40px;
+
+position: relative;
+margin-right: 18px;
+}
+.submitbtn{
+background-color: #e53b3b;
+border: none;
+border-radius: 13px;
+color: #ebebeb;
+transition: all ease-in 10ms;
+
+}
+.submitbtn:hover{
+background-color: #e53b3bd1;
+transition: all ease-in 10ms;
+color: #f6eeee;
+
+}

@@ -1,0 +1,63 @@
+<div id="main">
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Admin profile</h2>
+            <ul>
+                <li>
+                    <h5>Name: <p>
+                            {{adminDetails?.firstname}}&nbsp;{{adminDetails?.lastname}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>Id: <p>
+                            {{adminDetails?.id}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>service: <p>
+                            {{adminDetails?.service}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>telecaller: <p>
+                            {{adminDetails?.telecaller}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>createdOn Profile: <p>
+                            {{adminDetails?.createdOn}}
+                        </p>
+                    </h5>
+                </li>
+
+
+            </ul>
+        </aside>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <img src="" alt="Profile Image" class="profile-image">
+            </section>
+         
+            <section id="contact">
+                <h2>Contact</h2>
+                <h5>Email: <p> {{adminDetails?.email}} </p>
+                </h5>
+
+                <h5>Phone no: <p> {{adminDetails?.phone}} </p>
+                </h5>
+                <h5>work phone no: <p> {{adminDetails?.workphone}} </p>
+                </h5>
+            </section>
+            <section id="buttons">
+                <button class="edit-btn" style="background-color: green ; color: #fff; border: none; scale: 1;" [routerLink]="['/admin/admin-user-list/admin-updatelist',adminDetails?.id]">edit</button>
+                <!-- <button style="background-color: red ; color: #fff;">delete</button> -->
+            </section>
+        </main>
+    </div>
+</div>

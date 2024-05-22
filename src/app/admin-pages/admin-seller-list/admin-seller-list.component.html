@@ -1,0 +1,84 @@
+<div id="user-main">
+    <div class="user-filter">
+        <div class="user-filter-inner">
+            <div class="filter-search">
+                <input type="search" placeholder="Search...">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="filter-title">
+                <p>dealers list</p>
+            </div>
+            <div class="filter-addUser" >
+                <button [routerLink]="['/admin/admin-seller-list/admin-add-seller']"> <i class="fa-solid fa-plus"></i>
+                    &nbsp;Add user</button>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="user-list">
+        <div class="user-list-inner">
+            <div class="table">
+                <table class="user-table-inner">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+
+                            <th id="box-1">Id</th>
+                            <th id="box-2">First name</th>
+                            <th id="box-3">Last name</th>
+                            <th id="box-4">Dealer</th>
+                            <th id="box-5">Mobile</th>
+                            <th id="box-6">workphone</th>
+                            <th id="box-7">email</th>
+                            <th id="box-8">Action</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let dealer of dealers ">
+                        <!-- <tr *ngFor="let dealer of dealers | paginate:{
+                            itemsPerPage:tablesize,currentPage:currentpage
+                        }; let i =index"> -->
+                            <td>ho</td>
+                            <!-- <td>{{i+1+(tablesize*(currentpage-1))}}</td> -->
+                            <td>{{dealer.id}}</td>
+                            <td title="{{dealer.firstname|uppercase}}">{{dealer.firstname|uppercase}}</td>
+                            <td title="{{dealer.lastname|uppercase}}">{{dealer.lastname|uppercase}}</td>
+                           
+                            <td title="{{dealer.deller}}">{{dealer.deller}}</td>
+                            <td title="{{dealer.phone}}">{{dealer.phone}}</td>
+                            <td title="{{dealer.workphone}}">{{dealer.workphone}}</td>
+                            <td title="{{dealer.email}}">{{dealer.email}}</td>
+                         
+                            <td>
+                                <!-- <a title="Edit">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a> -->
+                                &nbsp;
+                                &nbsp;
+
+                                <a title="Profile" [routerLink]="['/admin/admin-seller-list/seller-profile',dealer.id]">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                &nbsp;
+                                &nbsp;
+
+                                <!-- <a title="Delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a> -->
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <div class="pagination">
+                    <!-- <pagination-controls (pageChange)="currentpage=$event">
+    
+                    </pagination-controls> -->
+            </div>
+        </div>
+    </div>
+</div>

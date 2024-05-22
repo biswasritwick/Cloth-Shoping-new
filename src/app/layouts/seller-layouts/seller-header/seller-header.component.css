@@ -1,0 +1,26 @@
+#main{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.sidenav{
+    margin-left: 30px;
+    a{
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+}
+.details{
+    margin-right: 30px;
+    p{
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+    h5{
+        font-size:1rem;
+        text-transform: capitalize;
+        color: #b8b4b4;
+    }
+}

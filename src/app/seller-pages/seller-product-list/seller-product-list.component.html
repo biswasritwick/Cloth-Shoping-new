@@ -1,0 +1,84 @@
+<div id="user-main">
+    <div class="user-filter">
+        <div class="user-filter-inner">
+            <div class="filter-search">
+                <input type="search" placeholder="Product id..." #searchbox (keyup)="searchProduct($event)"
+                    (blur)="close()">
+                <!-- <span><i class="fa-solid fa-magnifying-glass"></i></span> -->
+                <button (click)="submitSearch(searchbox.value)"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <ul class="searchresult" [class.searchresultview]="searchresultkeyup">
+                    <li *ngFor="let searchResult of searchresults">
+                        <a [routerLink]="['/products-details',searchResult.id]">{{searchResult.product_name}}
+                            madnafawf</a>
+                        <!-- mousedown event used because blur event apply under input search-->
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="filter-title">
+                <p>product list</p>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="user-list">
+        <div class="user-list-inner">
+            <div class="table">
+                <table class="user-table-inner">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Image</th>
+                            <th>ProductName</th>
+                            <th>Productprice</th>
+                            <th>Productcolor</th>
+                            <th>Discription</th>
+                            <th>Action</th>
+
+                        </tr>
+
+
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let productList of productLists">
+                        <!-- <tr *ngFor="let productList of productLists| paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index ;trackBy: trackProducts"> -->
+                            <td class="">{{productList.id}}</td>
+                            <td class="img">
+                                <img [src]="productList.product_image_link" alt="Product 1">
+                            </td>
+                            <td class="">{{productList.product_name}}</td>
+                            <td class="">Rs: {{productList.product_price}}</td>
+                            <td class="">
+                                <p class="color" [style.backgroundColor]="productList.product_colour"
+                                    title="{{productList.product_colour}}"></p>
+                            </td>
+                            <td class="">{{productList.product_details}}</td>
+                            <td class="">
+                                <a type="button">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <a routerLink="/seller-productForm/sellerproductUpdate/{{productList.id}}">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <!-- <pagination-controls (pageChange)="currentpage=$event">
+
+                </pagination-controls> -->
+
+            </div>
+        </div>
+    </div>
+</div>

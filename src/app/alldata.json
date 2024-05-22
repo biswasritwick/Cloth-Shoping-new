@@ -1,0 +1,507 @@
+{
+  "admin_data": [
+    {
+      "id": "2a30",
+      "firstname": "Ritwick",
+      "lastname": "Biswas",
+      "password": "12345",
+      "email": "rik@gmail.com",
+      "phone": "7872070356",
+      "workphone": "7074248193",
+      "service": true,
+      "telecaller": false,
+      "createdOn": "2/13/2024"
+    },
+    {
+      "id": "c4a8",
+      "firstname": "Aritra ",
+      "lastname": "Mandal",
+      "password": "12345",
+      "email": "aritra@gmail.com",
+      "phone": "1236547896",
+      "workphone": "1236547896",
+      "service": false,
+      "telecaller": true,
+      "createdOn": "2/13/2024"
+    },
+    {
+      "id": "8aae",
+      "firstname": "Swagatam",
+      "lastname": "Basak",
+      "password": "12345",
+      "email": "swagatam@gmail.com",
+      "phone": "1547896578",
+      "workphone": "1547896578",
+      "service": true,
+      "telecaller": false,
+      "createdOn": "2/13/2024"
+    },
+    {
+      "firstname": "sayan",
+      "lastname": "adhakari",
+      "password": "123456",
+      "email": "sayan@gmail.com",
+      "phone": "369875698",
+      "workphone": "369875698",
+      "service": false,
+      "telecaller": true,
+      "id": "bcd4"
+    },
+    {
+      "id": "306a",
+      "firstname": "mouli",
+      "lastname": "ghosh",
+      "password": "123456",
+      "email": "mouli@gmail.com",
+      "phone": "2569874569",
+      "workphone": "2569874569",
+      "service": false,
+      "telecaller": true,
+      "createdOn": "2/13/2024"
+    },
+    {
+      "id": "a183",
+      "firstname": "subham",
+      "lastname": "baidya",
+      "password": "12345",
+      "email": "subham@gmail.com",
+      "phone": "698756479",
+      "workphone": "698756479",
+      "service": false,
+      "telecaller": true,
+      "createdOn": "2/17/2024"
+    },
+    {
+      "id": "693b",
+      "firstname": "arpan",
+      "lastname": "bhowmik",
+      "password": "12345",
+      "email": "arpan@gmail.com",
+      "phone": "9876541258",
+      "workphone": "9876541258",
+      "service": true,
+      "telecaller": false,
+      "createdOn": "2/17/2024"
+    },
+    {
+      "id": "cc9a",
+      "firstname": "arun",
+      "lastname": "ghosh",
+      "password": "123456",
+      "email": "arun@gmail.com",
+      "phone": "9875463547",
+      "workphone": "9875463547",
+      "service": true,
+      "telecaller": true,
+      "createdOn": "2/20/2024"
+    },
+    {
+      "id": "d74c",
+      "firstname": "sohan",
+      "lastname": "das",
+      "password": "12345",
+      "email": "sohan@gmailcom",
+      "phone": "7896525789",
+      "workphone": "7896525789",
+      "service": false,
+      "telecaller": false,
+      "createdOn": "2/22/2024"
+    }
+  ],
+  "coustomer_Data": [
+    {
+      "id": "6dfc",
+      "name": "aritra mandal",
+      "contact": "6987456988",
+      "email": "aritra@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1b0c",
+      "name": "swagatam basak",
+      "contact": "7872414793",
+      "email": "swagatam@gmail.com",
+      "password": "123654"
+    },
+    {
+      "id": "1bed",
+      "name": "mouli ghosh",
+      "contact": "7872414793",
+      "email": "mouli@gmail.com",
+      "password": "123654"
+    }
+  ],
+  "delers_data": [
+    {
+      "firstname": "Ritwick",
+      "lastname": "Biswas",
+      "password": "123456",
+      "email": "rikbiswas527@gmail.com",
+      "phone": "7872070359",
+      "workphone": "7074248199",
+      "address": "KHARAGPUR SUBHASPALLY",
+      "deller": "phone",
+      "seller": true,
+      "id": "3b4c"
+    },
+    {
+      "id": "a350",
+      "firstname": "aritra ",
+      "lastname": "mandal",
+      "password": "123456",
+      "email": "aritra@gmail.com",
+      "phone": "1236547896",
+      "workphone": "1236547896",
+      "address": "kolkata,uluberiya,subhaspally,bhabanipur",
+      "deller": "cloth",
+      "seller": true,
+      "createdOn": "2/15/2024"
+    }
+  ],
+  "delers_product": [
+    {
+      "id": "84b6",
+      "product_name": "Cotton Plain Kurti For Women ",
+      "product_price": "750",
+      "product_colour": "blue",
+      "product_category": "kurti",
+      "product_details": "Blue A Line Cotton Plain Kurti For Women ",
+      "product_image_link": "https://5.imimg.com/data5/BA/BD/IT/SELLER-28478004/blue-a-line-cotton-plain-kurti-for-women.png",
+      "createdOn": "3/5/2024",
+      "dealerID": "3b4c",
+      "quantity": 100
+    },
+    {
+      "id": "f488",
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_colour": "black",
+      "product_category": "kurti",
+      "product_details": "Nayra Cut Kurti Women and Girl's Rayon Printed Single Fesival Nayra Cut Kurti",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "3b4c",
+      "quantity": 100
+    },
+    {
+      "id": "f798",
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_colour": "black",
+      "product_category": "kurti",
+      "product_details": "Nayra Cut Kurti Women and Girl's Rayon Printed Single Fesival Nayra Cut Kurti",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "3b4c",
+      "quantity": 100
+    },
+    {
+      "id": "f218",
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_colour": "black",
+      "product_category": "kurti",
+      "product_details": "Nayra Cut Kurti Women and Girl's Rayon Printed Single Fesival Nayra Cut Kurti",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "3b4c",
+      "quantity": 100
+    },
+    {
+      "id": "2098",
+      "product_name": "Women Cotton Serene",
+      "product_price": "999",
+      "product_colour": "White",
+      "product_category": "kurti",
+      "product_details": "Women Cotton Serene White Kurti",
+      "product_image_link": "https://www.jaipurfabric.com/uploads/jaipurfabric/products/jfk39-535346_m.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "3b4c",
+      "quantity": 100
+    },
+    {
+      "id": "9c32",
+      "product_name": "Blue Shirts For Men",
+      "product_price": "789",
+      "product_colour": "blue",
+      "product_category": "shirt",
+      "product_details": "Buy Blue Shirts for Men by LOUIS MONARCH ",
+      "product_image_link": "https://assets.ajio.com/medias/sys_master/root/20230620/TtZD/649201a7d55b7d0c637e4e30/-473Wx593H-463235957-blue-MODEL.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "a5d9",
+      "product_name": "Starry Beaded ",
+      "product_price": "1999",
+      "product_colour": "black",
+      "product_category": "shirt",
+      "product_details": "Starry Beaded Premium Black Shirt For Men Black",
+      "product_image_link": "https://rukminim2.flixcart.com/image/850/1000/xif0q/shirt/g/9/p/s-black-5-jai-textiles-original-imag42m5hcfue7np-bb.jpeg?q=90&crop=false",
+      "createdOn": "3/5/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "42a4",
+      "product_name": "Formal Shirts",
+      "product_price": "1899",
+      "product_colour": "blue",
+      "product_category": "shirt",
+      "product_details": "Sonis Very Good Men Formal Shirts",
+      "product_image_link": "https://5.imimg.com/data5/SELLER/Default/2023/7/326604149/SV/WZ/AS/193245561/men-formal-shirts.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "90e5",
+      "product_name": "Roadster  Fit Checked Casual",
+      "product_price": "1699",
+      "product_colour": "blue",
+      "product_category": "shirt",
+      "product_details": "Roadster Men Brown & Black Slim Fit Checked Casual Sustainable Shirt",
+      "product_image_link": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2164373/2017/11/15/11510749192975-Roadster-Men-Brown--Black-Regular-Fit-Checked-Casual-Shirt-8071510749192783-1.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "860f",
+      "product_name": "Slim Fit Jeans",
+      "product_price": "799",
+      "product_colour": "blue",
+      "product_category": "jeans",
+      "product_details": "Washed Distressed Slim Fit Jeans",
+      "product_image_link": "https://assets.ajio.com/medias/sys_master/root/20230705/9hZ3/64a59403a9b42d15c93896e1/-473Wx593H-460698973-blue-MODEL.jpg",
+      "createdOn": "3/7/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "860p",
+      "product_name": "Slim Fit Jeans",
+      "product_price": "799",
+      "product_colour": "blue",
+      "product_category": "jeans",
+      "product_details": "Washed Distressed Slim Fit Jeans",
+      "product_image_link": "https://assets.ajio.com/medias/sys_master/root/20230705/9hZ3/64a59403a9b42d15c93896e1/-473Wx593H-460698973-blue-MODEL.jpg",
+      "createdOn": "3/7/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "4526",
+      "product_name": "Mid-Wash Slim Fit Jeans",
+      "product_price": "899",
+      "product_colour": "blue",
+      "product_category": "jeans",
+      "product_details": "Mid-Wash Slim Fit Jeans",
+      "product_image_link": "https://assets.ajio.com/medias/sys_master/root/20211228/eoWq/61ca15d7aeb26901101e3931/-473Wx593H-441124580-darkblue-MODEL.jpg",
+      "createdOn": "3/7/2024",
+      "dealerID": "a350",
+      "quantity": 100
+    },
+    {
+      "id": "6a17",
+      "product_name": "Men's Punjabi",
+      "product_price": "1999",
+      "product_colour": "yellow",
+      "product_details": "Best collection of men's punjabi and sherwani in Canada & USA online | Buy at shenextfashion",
+      "product_image_link": "https://content-19c48.kxcdn.com/image/cache/24082023/Day_09.SNF_1505-450x650.jpg",
+      "createdOn": "3/7/2024",
+      "dealerID": "a350",
+      "product_category": "punjabi",
+      "quantity": 100
+    },
+    {
+      "id": "946c",
+      "product_name": "i phone 15",
+      "product_price": "71999",
+      "product_colour": "black",
+      "product_details": "Apple debuts iPhone 15 and iPhone 15 Plus - Apple (IN)",
+      "product_image_link": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1692846357018",
+      "createdOn": "3/22/2024",
+      "dealerID": "3b4c",
+      "product_category": "phone",
+      "quantity": 100
+    },
+    {
+      "id": "3f61",
+      "product_name": "i phone 13",
+      "product_price": "51999",
+      "product_colour": "green",
+      "product_details": "Apple debuts iPhone 13 and iPhone 13 Plus - Apple (IN)",
+      "product_image_link": "https://www.reliancedigital.in/medias/iPhone-13-Green-PDP-Image-492849506-i-2-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMTUyODl8aW1hZ2UvanBlZ3xpbWFnZXMvaDJhL2g3YS8xMDAxNjE1MjY4MjUyNi5qcGd8NzNkMzE3N2UxY2Y1ZjdmZjFlOTlmMzQ3NDhlYTJhOTVhMDMyZjRjOGIzZWQzNTExMDMzYTBjZGE5YWFkZmIwYQ",
+      "createdOn": "3/22/2024",
+      "dealerID": "3b4c",
+      "product_category": "phone",
+      "quantity": 100
+    }
+  ],
+  "cart_product": [],
+  "orders_product": [
+    {
+      "id": "2c4e",
+      "coustomerId": "1b0c",
+      "productId": "2098",
+      "dealerID": "3b4c",
+      "quantity": 1,
+      "product_name": "Women Cotton Serene",
+      "product_price": "999",
+      "product_image_link": "https://www.jaipurfabric.com/uploads/jaipurfabric/products/jfk39-535346_m.jpg",
+      "productOrder_stamp": "4/5/2024, 5:53:01 PM",
+      "sellerOrder_stamp": "4/5/2024, 5:54:11 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": "rejected",
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "subhaspally",
+          "Land_mark": "padmapukur",
+          "Contact_no": "2343234323",
+          "Email": "babibiswas527@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "cf1d",
+      "coustomerId": "1b0c",
+      "productId": "860f",
+      "dealerID": "a350",
+      "quantity": 3,
+      "product_name": "Slim Fit Jeans",
+      "product_price": "799",
+      "product_image_link": "https://assets.ajio.com/medias/sys_master/root/20230705/9hZ3/64a59403a9b42d15c93896e1/-473Wx593H-460698973-blue-MODEL.jpg",
+      "productOrder_stamp": "4/5/2024, 5:56:00 PM",
+      "sellerOrder_stamp": "4/5/2024, 6:00:39 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": true,
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "subhaspally",
+          "Land_mark": "padmapukur",
+          "Contact_no": "2343234323",
+          "Email": "babibiswas527@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "27a6",
+      "coustomerId": "1b0c",
+      "productId": "860f",
+      "dealerID": "a350",
+      "quantity": 3,
+      "product_name": "Slim Fit Jeans",
+      "product_price": "799",
+      "product_image_link": "https://assets.ajio.com/medias/sys_master/root/20230705/9hZ3/64a59403a9b42d15c93896e1/-473Wx593H-460698973-blue-MODEL.jpg",
+      "productOrder_stamp": "4/5/2024, 6:01:49 PM",
+      "sellerOrder_stamp": "4/5/2024, 6:01:56 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": true,
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "subhaspally",
+          "Land_mark": "padmapukur",
+          "Contact_no": "2343234323",
+          "Email": "babibiswas527@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1d3e",
+      "coustomerId": "1b0c",
+      "productId": "f488",
+      "dealerID": "3b4c",
+      "quantity": 1,
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "productOrder_stamp": "4/5/2024, 6:01:49 PM",
+      "sellerOrder_stamp": "4/5/2024, 6:02:10 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": "rejected",
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "subhaspally",
+          "Land_mark": "padmapukur",
+          "Contact_no": "2343234323",
+          "Email": "babibiswas527@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "f128",
+      "coustomerId": "1b0c",
+      "productId": "f488",
+      "dealerID": "3b4c",
+      "quantity": 1,
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "productOrder_stamp": "4/5/2024, 6:11:38 PM",
+      "sellerOrder_stamp": "4/5/2024, 6:12:07 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": true,
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "",
+          "Land_mark": "",
+          "Contact_no": "",
+          "Email": ""
+        }
+      ]
+    },
+    {
+      "id": "5746",
+      "coustomerId": "1b0c",
+      "productId": "946c",
+      "dealerID": "3b4c",
+      "quantity": 1,
+      "product_name": "i phone 15",
+      "product_price": "71999",
+      "product_image_link": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1692846357018",
+      "productOrder_stamp": "4/5/2024, 6:17:42 PM",
+      "sellerOrder_stamp": "5/22/2024, 12:55:26 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": true,
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "",
+          "Land_mark": "",
+          "Contact_no": "",
+          "Email": ""
+        }
+      ]
+    },
+    {
+      "id": "b69e",
+      "coustomerId": "6dfc",
+      "productId": "f218",
+      "dealerID": "3b4c",
+      "quantity": 1,
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "productOrder_stamp": "5/22/2024, 12:51:10 PM",
+      "sellerOrder_stamp": "5/22/2024, 12:54:59 PM",
+      "deliveryOrder_stamp": false,
+      "dealerAcceptedOrder": true,
+      "deliveryOrder": false,
+      "address": [
+        {
+          "Address": "",
+          "Land_mark": "",
+          "Contact_no": "",
+          "Email": ""
+        }
+      ]
+    }
+  ]
+}

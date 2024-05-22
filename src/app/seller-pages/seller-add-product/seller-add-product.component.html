@@ -1,0 +1,107 @@
+<section id="add-user-main">
+    <div class="add-user-inner">
+        <div class="basic-information">
+            <div class="basic-information-header">
+                <h2 style="color: #ba1515; font-size: 1.4vw; text-transform: capitalize;">Basic product Information
+                </h2>
+            </div>
+            <div class="basic-information-form">
+                <form id="information-form" #addDealersForm='ngForm' (ngSubmit)="addUserdata(addDealersForm.value)">
+
+                    <div class="information-input">
+                        <input type="text" [placeholder]="['product name*']" name="product_name" #productname="ngModel"
+                            ngModel minlength="3" maxlength="25" required>
+                        <!-- {{productname.errors|json}} -->
+                        <div class="error" style="color: red; text-transform: capitalize;" *ngIf="productname.touched && (productname.invalid||productname.dirty) ||isFormSubmit">
+                            <span *ngIf="productname.errors?.['required']"> * Please Enter your product name </span>
+                            <span *ngIf="productname.errors?.['minlength']"> * Min 3 charactors needed</span>
+                            <span *ngIf="productname.errors?.['maxlength']"> * Min 25 charactors needed </span>
+                        </div>
+
+                    </div>
+                    <div class="information-input">
+                        <input type="text" [placeholder]="['product price*']" name="product_price"
+                            #productprice="ngModel" ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;" *ngIf="productprice.touched && (productprice.invalid||productprice.dirty)">
+                            <span *ngIf="productprice.errors?.['required']"> * Please Enter product price</span>
+
+                        </div>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" [placeholder]="['product colour*']" name="product_colour"
+                            #productcolour="ngModel" ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;" *ngIf="productcolour.touched && (productcolour.invalid||productcolour.dirty)">
+                            <span *ngIf="productcolour.errors?.['required']"> * Please Enter product colour</span>
+
+                        </div>
+                    </div>
+                    <div class="information-input">
+                        <input type="number" [placeholder]="['product colour*']" name="quantity"
+                        #quantity="ngModel" ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;" *ngIf="quantity.touched && (quantity.invalid||quantity.dirty)">
+                            <span *ngIf="quantity.errors?.['required']"> * Please Enter product quantity</span>
+
+                        </div>
+                    </div>
+                    <div class="information-input" >
+                        <select name="product_category" id="product" (change)="categoryValue($event)"  >
+                      
+                            <option value="">--selected category--</option>
+                            <option value="{{product.value}}" *ngFor="let product of products ">{{product.valueName}}</option>
+                        
+                        </select>
+                       
+                        <!-- <div class="error" style="color: red; text-transform: capitalize;" *ngIf="category.touched && (category.invalid||category.dirty)">
+                            <span *ngIf="category.errors?.['required']"> * Please Enter product category</span>
+
+                        </div> -->
+                    </div>
+                    <div class="information-input">
+
+                        <input type="text" [placeholder]="['Enter product Discription*']" name="product_details"
+                            #product_details="ngModel" ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;" *ngIf="product_details.touched && (product_details.invalid||product_details.dirty)">
+                            <span *ngIf="product_details.errors?.['required']"> * Please Enter product </span>
+
+                        </div>
+                    </div>
+                   
+
+
+                    <div class="permission">
+
+                        <div class="permission-info">
+                            <p style="font-size: 1.4vw; margin: 0;  color: #ba1515; text-transform: capitalize;">image
+                                link</p>
+                        </div>
+                        <div class="permission-select">
+                            <div class="information-input">
+                                <input type="text" [placeholder]="['product image link*']" name="product_image_link"
+                                    #productimagelink="ngModel" ngModel required>
+                                <div class="error" style="color: red; text-transform: capitalize;" *ngIf="productimagelink  .touched && (productimagelink.invalid||productimagelink.dirty)">
+                                    <span *ngIf="productimagelink.errors?.['required']"> * Please Enter image
+                                        link</span>
+                                    <span *ngIf="productimagelink.errors?.['btnsubmit']"> * Please Enter image
+                                        link</span>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="formbtn">
+                            <button type="submit" class="submitbtn" [disabled]="!addDealersForm .form.valid" > 
+                                Submit</button>
+
+                        </div>
+
+
+                    </div>
+                    <div class="basic-information-form-action"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

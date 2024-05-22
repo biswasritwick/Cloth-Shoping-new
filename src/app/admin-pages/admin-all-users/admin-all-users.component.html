@@ -1,0 +1,76 @@
+<div id="user-main">
+    <div class="user-filter">
+        <div class="user-filter-inner">
+            <div class="filter-search">
+                <input type="search" placeholder="Search...">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="filter-title">
+                <p>admin list</p>
+            </div>
+            <div class="filter-addUser">
+                <button [routerLink]="['/admin/admin-user-list/admin-add-user']"> <i class="fa-solid fa-plus"></i>
+                    &nbsp;Add user</button>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="user-list">
+        <div class="user-list-inner">
+            <div class="table">
+                <table class="user-table-inner">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Mobile</th>
+                            <th>work phone</th>
+                            <th>email</th>
+                            <th *ngIf="pass">password</th>
+                            <!-- <th>permission</th> -->
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let admin of admins ">
+                        <!-- <tr *ngFor="let admin of admins | paginate:{
+                            itemsPerPage:tablesize,currentPage:currentpage
+                        }; let i =index"> -->
+                            <td>hi</td>
+                            <!-- <td>{{i+1+(tablesize*(currentpage-1))}}</td> -->
+                            <td>{{admin.firstname|uppercase}}</td>
+                            <td>{{admin.lastname|uppercase}}</td>
+                            <td>{{admin.phone}}</td>
+                            <td>{{admin.workphone}}</td>
+                            <td>{{admin.email}}</td>
+                            <td *ngIf="pass">{{admin.password}}</td>
+
+                            <!-- <td>{{admin.service}}</td> -->
+                            <td>
+                                <a style="color: #000;" title="Profile"
+                                    [routerLink]="['/admin/admin-user-list/admin-profile',admin.id]">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                &nbsp;
+                                <!-- <a style="color: #000;" title="Edit" [routerLink]="['/admin/admin-user-list/admin-updatelist',admin.id]">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a> -->
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <!-- <pagination-controls (pageChange)="currentpage=$event">
+
+                </pagination-controls> -->
+               
+            </div>
+        </div>
+    </div>
+</div>

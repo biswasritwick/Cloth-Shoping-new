@@ -1,0 +1,66 @@
+
+<div id="main">
+    <div id="main_inner">
+
+        <div class="products_section">
+            <div class="product-content">
+                <div class="product-content-inner">
+                    <div class="product-content-text">
+
+                        <h4>good & best quality product</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content-text2">
+                <div class="product-content-text2-inner">
+                    <p>- shop with us -</p>
+                </div>
+            </div>
+            <div class="product-section">
+                <div class="product-section-inner">
+                    <div class="products">
+                        <ul>
+                            <li class="product-cart" *ngFor="let frontProduct of frontProducts  "  >
+                            <!-- <li class="product-cart" *ngFor="let frontProduct of frontProducts  | paginate:{
+                                itemsPerPage:tablesize,currentPage:currentpage
+                            }; let i =index"   > -->
+                                <div class="product-cart-image">
+                                    <img [src]="[frontProduct.product_image_link]" (mouseover)="fun(true)" (mouseout)="fun(false)" appHighlights>
+                                    <!-- <div class="panel" [ngClass]="{'remove':panel}"><a>quick view</a></div> -->
+                                </div>
+                                <div class="product-cart-details">
+                                    <div class="product-cart-name">
+                                        <p>{{frontProduct.product_name}}</p>
+                                    </div>
+                                    <div class="product-cart-genden">
+                                        <p>{{frontProduct.quantity}}</p>
+                                    </div>
+                                    <div class="product-cart-price">
+                                         <p>Rs: {{frontProduct.product_price}}</p>
+                                        </div>
+                                    <div class="product-cart-btn">
+                                        <a [routerLink]="['/products-details',frontProduct.id]">Shop now</a>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                       
+                    </div>
+                    <div class="pagination">
+                    <div class="pagination-inner">
+
+                        <!-- <pagination-controls (pageChange)="currentpage=$event">
+        
+                        </pagination-controls> -->
+                    </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

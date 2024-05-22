@@ -1,0 +1,202 @@
+<div id="main">
+    <div class="login-background-img-inner">
+
+        <!-- ----------coustomer login------------- -->
+        <div class="login-form" *ngIf="showlogin">
+            <div class="login-title">
+                <p>Coustomer Login</p>
+
+            </div>
+            <form #coustomerlogin="ngForm">
+                <div class="login-form-inner">
+                    <div class="form-input">
+                        <input type="email" placeholder="Email" ngModel name="email" required maxlength="25"
+                            #email="ngModel">
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="email.touched && (email.invalid||email.dirty) ">
+                            <span *ngIf="email.errors?.['required']">please enter your email*</span>
+                            <span *ngIf="email.errors?.['maxlength']">max length '25'*</span>
+
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="password" placeholder="password" ngModel name="password" required maxlength="6"
+                            #password="ngModel">
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="password.touched && (password.invalid||password.dirty) ">
+                            <span *ngIf="password.errors?.['required']">please enter your password*</span>
+                            <span *ngIf="password.errors?.['maxlength']">max length '25'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-button">
+                        <a (click)="coustomerLogin(coustomerlogin.value)">Submit</a>
+
+                    </div>
+                    <div class="form-link">
+                        <a (click)="showsignupfun()">Don't have account?Click for signup</a>
+                        <a (click)="employeelogin()"> employee login zone</a>
+                        <a (click)="sellerlogin()">seller login zone</a>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- ----------coustomer signup------------- -->
+
+        <div class="login-form" *ngIf="showsignup">
+            <div class="login-title">
+                <p>Coustomer signup</p>
+
+            </div>
+            <form #coustomerSignup="ngForm">
+                <div class="login-form-inner">
+                    <div class="form-input">
+                        <input type="text" placeholder="your full name" name="name" #name="ngModel" maxlength="25"
+                            minlength="3" ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="name.touched && (name.invalid||name.dirty) ">
+                            <span *ngIf="name.errors?.['required']">please enter your name*</span>
+                            <span *ngIf="name.errors?.['maxlength']">max length '25'*</span>
+                            <span *ngIf="name.errors?.['minlength']">min length '3'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="phone no" name="contact" #contact="ngModel" maxlength="10"
+                            minlength="10" ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="contact.touched && (contact.invalid||contact.dirty) ">
+                            <span *ngIf="contact.errors?.['required']">please enter your contact*</span>
+                            <span *ngIf="contact.errors?.['maxlength']">max length '25'*</span>
+                            <span *ngIf="contact.errors?.['minlength']">min length '3'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-input">
+                        <input type="email" placeholder="Email" name="email" #email="ngModel" maxlength="25" ngModel
+                            required>
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="email.touched && (email.invalid||email.dirty) ">
+                            <span *ngIf="email.errors?.['required']">please enter your email*</span>
+                            <span *ngIf="email.errors?.['maxlength']">max length '25'*</span>
+
+                        </div>
+
+                    </div>
+                
+                    <div class="form-input">
+                        <input type="password" placeholder="password" name="password" #password="ngModel" maxlength="6"
+                            ngModel required>
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="password.touched && (password.invalid||password.dirty) ">
+                            <span *ngIf="password.errors?.['required']">please enter your password*</span>
+                            <span *ngIf="password.errors?.['maxlength']">max length '6'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-button">
+                        <button (click)="coustomersignup(coustomerSignup.value)"[disabled]="!coustomerSignup.form.valid" >Submit</button>
+
+                    </div>
+                    <div class="form-link">
+                        <a (click)="showLogin()">Don't have account?Click for signup</a>
+                        <a>employee login zone</a>
+                        <a>seller login zone</a>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- ----------seller login------------- -->
+
+        <div class="login-form" *ngIf="sellerLogin">
+            <div class="login-title">
+                <p>seller Login</p>
+
+            </div>
+            <form #sellerLoginForm="ngForm">
+                <div class="login-form-inner">
+                    <div class="form-input">
+                        <input type="email" placeholder="Email" ngModel name="email" #email="ngModel" required>
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="email.touched && (email.invalid||email.dirty) ">
+                            <span *ngIf="email.errors?.['required']">please enter your email*</span>
+                            <span *ngIf="email.errors?.['maxlength']">max length '25'*</span>
+                        </div>
+
+                    </div>
+                    <div class="form-input">
+                        <input type="password" placeholder="password" ngModel name="password" #password="ngModel"
+                            required maxlength="6">
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="password.touched && (password.invalid||password.dirty) ">
+                            <span *ngIf="password.errors?.['required']">please enter your password*</span>
+                            <span *ngIf="password.errors?.['maxlength']">max length '25'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-button">
+                        <a (click)="sellerlogdata(sellerLoginForm.value)">Submit</a>
+
+                    </div>
+                    <div class="form-link">
+
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- ----------employee login------------- -->
+
+        <div class="login-form" *ngIf="employeeLogin">
+            <div class="login-title">
+                <p>employee Login</p>
+
+            </div>
+
+            <form id="employee" #employeForm="ngForm">
+                <div class="login-form-inner">
+                    <div class="form-input">
+                        <input type="email" placeholder="Email" ngModel name="email" required maxlength="25"
+                            #email="ngModel">
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="email.touched && (email.invalid||email.dirty) ">
+                            <span *ngIf="email.errors?.['required']">please enter your email*</span>
+                            <span *ngIf="email.errors?.['maxlength']">max length '25'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-input">
+                        <input type="password" placeholder="password" ngModel name="password" required maxlength="6"
+                            #password="ngModel">
+                        <div class="error" style="color: red; text-transform: capitalize;"
+                            *ngIf="password.touched && (password.invalid||password.dirty) ">
+                            <span *ngIf="password.errors?.['required']">please enter your password*</span>
+                            <span *ngIf="password.errors?.['maxlength']">max length '25'*</span>
+
+                        </div>
+
+                    </div>
+                    <div class="form-button">
+                        <a (click)="employelogdata(employeForm.value)">Submit</a>
+
+                    </div>
+
+
+                    <div class="form-link">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

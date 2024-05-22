@@ -1,0 +1,78 @@
+<section id="add-user-main">
+    <div class="add-user-inner">
+        <div class="basic-information">
+            <div class="basic-information-header">
+                <h2 style="color: #ba1515; font-size: 1.4vw; text-transform: capitalize;">Basic Information deller</h2>
+            </div>
+            <div class="basic-information-form">
+                <form id="information-form" #addDealersForm='ngForm' (ngSubmit)="addUserdata(addDealersForm.value)">
+
+                    <div class="information-input">
+                        <input type="text" placeholder="First Name*" name="firstname" #firstname="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="firstname && firstname.invalid && firstname.touched"> * Please Enter  First Name</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="Last Name*" name="lastname" #lastname="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="lastname && lastname.invalid && lastname.touched"> * Please Enter  last Name</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="Password*" name="password" #password="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="password && password.invalid && password.touched"> *  Please Enter  Password</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="Email*" name="email" #email="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="email && email.invalid && email.touched"> *  Please Enter  Email</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="Phone*" name="phone" #phone="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="phone && phone.invalid && phone.touched"> *  Please Enter  Contact No</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="Work Phone*" name="workphone" #workphone="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="workphone && workphone.invalid && workphone.touched"> *  Please Enter  Aulternetive no</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="address*" name="address" #address="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="address && address.invalid && address.touched"> * Please Enter  address</span>
+                    </div>
+                    <div class="information-input">
+                        <input type="text" placeholder="deller*" name="deller" #deller="ngModel" ngModel required>
+                        <span style="color: red;" *ngIf="deller && deller.invalid && deller.touched"> * Please Enter deller</span>
+                    </div>
+                    <div class="permission">
+                        <div class="permission-info">
+                            <p style="font-size: 1.4vw; margin: 0;  color: #ba1515;">Permission</p>
+                        </div>
+                        <div class="permission-select">
+                            <div class="permission-tag">
+                                <label>Permission : &nbsp;</label>
+
+                            </div>
+                            <div class="permission-select-option">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="seller" ngModel id="seller" #seller="ngModel"
+                                    [(ngModel)]="sellerCheck" required>
+                                    <label for="seller" style="text-transform: capitalize;">seller</label>
+                                </div>
+                                <span style="color: red;" class="service-span" *ngIf="seller && seller.invalid "> * Please
+                                    allow SERVICE
+                                    function</span>
+                            
+                            </div>
+
+
+                        </div>
+                        <div class="formbtn">
+                            <button type="submit" class="submitbtn" [disabled]="addDealersForm .invalid">
+                                Submit</button>
+                           
+                        </div>
+
+
+                    </div>
+                    <div class="basic-information-form-action"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

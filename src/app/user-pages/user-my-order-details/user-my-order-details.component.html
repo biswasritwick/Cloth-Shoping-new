@@ -1,0 +1,88 @@
+<div id="main">
+    <div class="order-details">
+        <div class="order-details-inner">
+            <div class="order-information">
+                <div class="information">
+                    <div class="informations-heading">
+                        <p>
+                            order details
+                        </p>
+                    </div>
+                </div>
+                <div class="information" style="background-color: #dedede42;">
+                    <div class="informations" >
+                        <p>order no:</p>
+                        <p class="fontStyle"> {{orderDetails?.id}}</p>
+                    </div>
+                    <div class="informations">
+                        <p>order date: </p>
+                        <p class="fontStyle"> {{orderDetails?.productOrder_stamp}}</p>
+                    </div>
+                </div>
+                <div class="information">
+                    <div class="informations">
+                        <p>contact no:</p>
+                        <p class="fontStyle">{{orderDetailsAddress.Contact_no}}</p>
+
+                    </div>
+                    <div class="informations">
+                        <p>quantaiy:</p>
+                        <p class="fontStyle">{{orderDetails?.quantity}}</p>
+
+                    </div>
+                </div>
+                <div class="information" style="background-color: #dedede42;">
+                    <div class="informations">
+                        <p>total price:</p>
+                        <p class="fontStyle">{{orderDetails?.product_price}}</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="order-status">
+
+                <div class="information">
+                    <div class="informations-heading">
+                        <p>
+                            order history
+                        </p>
+                    </div>
+                </div>
+                <div class="status" style="background-color: #dedede42;">
+                    <div class="status-information">
+                        <p>delivery update details</p>
+                    </div>
+                    <div class="status-information">
+                        <p>status</p>
+                    </div>
+                    <div class="status-information">
+                        <p>date</p>
+                    </div>
+                </div>
+                <div class="status" >
+                    <div class="status-information">
+                        <p>seller accepted your order</p>
+                    </div>
+                    <div class="status-information">
+                        <p>{{statusInformation}}</p>
+                    </div>
+                    <div class="status-information">
+                        <p>{{statusTimeInformation}}</p>
+                    </div>
+                </div>
+                <div class="status" style="background-color: #dedede42;">
+                    <div class="status-information">
+                        <p>order delivered</p>
+                    </div>
+                    <div class="status-information">
+                        <p>{{deliverystatusInformation}}</p>
+                    </div>
+                    <div class="status-information">
+                        <p>{{deliverystatusTimeInformation}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div id="main">
+    <div class="main-inner">
+        <div class="orders" *ngFor="let i of orderDetails;index as n">
+            <div class="order-details1">
+                <div class="orderDetail">
+                    <div class="orderDetail-inner">
+                        <div class="orderDetail-image">
+                            <div class="img">
+                                <img [src]="[i.product_image_link]" >
+
+                            </div>
+                            <div class="title">
+                                <p>{{i.product_name}}</p>
+
+                            </div>
+                        </div>
+                        <div class="orderDetail-price">
+                            <p>Price: {{i.product_price}}</p>
+                            <p>Quantity: {{i.quantity}}</p>
+                        </div>
+                        <div class="orderDetail-status">
+                            <p> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-details2">
+                <div class="order-details2-inner">
+                    <div class="order-status">
+                        <p>(Delivery id =   {{i.id}})</p>
+                    </div>
+                    <div class="order-cancel">
+                        <button [routerLink]="['/user-myOrder-details',i.id]" >view order </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

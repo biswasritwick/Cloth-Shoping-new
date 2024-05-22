@@ -1,0 +1,236 @@
+<div id="main">
+    <div class="main-font-backgroung">
+        <div class="main-font-backgroung-inner">
+            <div class="main-font-text">
+                <div class="main-font-text-inner">
+                    <div class="main-text">
+                        <p>Raining Offers For Hot Summer!</p>
+                    </div>
+                    <div class="main-discount">
+                        <p> 25% Off On All Products</p>
+                    </div>
+                    <div class="main-detailsbtn">
+                        <div class="main-btn">
+                            <div class="mainBtn"><a>shop now</a></div>
+                            <div class="mainBtn mainbtn-read"><a>read more</a></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="discount-display">
+        <div class="discount-display-inner">
+            <div class="display-elimentor">
+                <div class="display-elimentor-sponsers">
+
+                    <div class="sponsers-images">
+                        <img src="/assets/images/client-logo-2.png" alt="" srcset="">
+                    </div>
+                    <div class="sponsers-images">
+                        <img src="/assets/images/client-logo-4.png" alt="" srcset="">
+                    </div>
+                    <div class="sponsers-images">
+                        <img src="/assets/images/client-logo-5.png" alt="" srcset="">
+                    </div>
+                    <div class="sponsers-images">
+                        <img src="/assets/images/client-logo-2.png" alt="" srcset="">
+                    </div>
+                    <div class="sponsers-images">
+                        <img src="/assets/images/client-logo-2.png" alt="" srcset="">
+                    </div>
+                    <div class="sponsers-images">
+                        <img src="/assets/images/client-logo-2.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="display-discount-cart">
+                    <div class="display-cart"
+                        style=" background-image: url(/assets/images/men-fashion-free-img.jpg); background-position: top left;">
+                        <div class="display-cart-inner"></div>
+
+                        <div class="display-cart-text-inner">
+                            <div class="cart-text">
+                                <h3>20% Off On Tank Tops</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.</p>
+                            </div>
+                            <div class="cart-btn ">
+                                <a>shop now</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="display-cart"
+                        style=" background-image: url(/assets/images/footwear-free-img.jpg); background-position: top right;">
+                        <div class="display-cart-inner"></div>
+
+                        <div class="display-cart-text-inner">
+                            <div class="cart-text">
+                                <h3>20% Off On Tank Tops</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.</p>
+                            </div>
+                            <div class="cart-btn ">
+                                <a>check now</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="display-cart"
+                        style=" background-image: url(/assets/images/women-fashion-free-img.jpg); background-position: top right;">
+                        <div class="display-cart-inner"></div>
+
+                        <div class="display-cart-text-inner">
+                            <div class="cart-text">
+                                <h3>20% Off On Tank Tops</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.</p>
+                            </div>
+                            <div class="cart-btn ">
+                                <a>shop now</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="products">
+        <div class="product-list">
+            <div class="product-list-inner">
+                <div class="list-heding">
+                    <div class="list-heading-inner">
+                        <h3>Featured Products</h3>
+                    </div>
+                </div>
+                <div class="list-style-line">
+                    <div class="list-style-line-inner"></div>
+
+                </div>
+                <div class="product-items">
+                    <div class="product-items-inner">
+                        <ul >
+                            <li class="product-cart" *ngFor="let frontProduct of frontProducts"   >
+                                <div class="product-cart-image">
+                                    <img src="{{frontProduct.product_image_link}}" alt="">
+                                </div>
+                                <div class="product-cart-details">
+                                    <div class="product-cart-name">
+                                        <p>{{frontProduct.product_name}}</p>
+                                    </div>
+                                   
+                                    <div class="product-cart-price">
+                                         <p>Rs: {{frontProduct.product_price}}</p>
+                                        </div>
+                                    <div class="product-cart-btn">
+                                        <a [routerLink]="['/products-details',frontProduct.id]">Shop now</a>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-discount-poster">
+                    <div class="product-discount-poster-inner">
+                        <div class="product-discount-poster-image">
+                            <div class="product-poster-content">
+                                <div class="product-text1">
+                                    <p>Limited Time Offer</p>
+
+                                </div>
+                                <div class="product-text1">
+                                    <h3>Special Edition</h3>
+
+                                </div>
+                                <div class="product-text1">
+                                    <p>Limited Time Offer
+                                        Special Edition
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+                                        nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                                <div class="product-text1">
+                                    <p>Buy This T-shirt At 20% Discount, Use Code OFF20</p>
+                                </div>
+                                <div class="product-text-btn cart-btn ">
+                                    <a>shop now</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="elimentor-eliment">
+                    <div class="elimentor-eliment-inner">
+                        <div class="elimentor-content-box">
+                            <div class="elimentor-content-box-iiner">
+                                <div class="elimentor-content-image">
+                                    <img src="../../../assets/images/globe-free-img.png">
+                                </div>
+                                <div class="elimentor-content-heading">
+                                    <p>Worldwide Shipping</p>
+                                </div>
+                                <div class="elimentor-content-details">
+                                    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="elimentor-content-box">
+                            <div class="elimentor-content-box-iiner">
+                                <div class="elimentor-content-image">
+                                    <img src="/assets/images/quality-free-img.png">
+                                </div>
+                                <div class="elimentor-content-heading">
+                                    <p>Best Quality</p>
+                                </div>
+                                <div class="elimentor-content-details">
+                                    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="elimentor-content-box">
+                            <div class="elimentor-content-box-iiner">
+                                <div class="elimentor-content-image">
+                                    <img src="/assets/images/tag-free-img.png">
+                                </div>
+                                <div class="elimentor-content-heading">
+                                    <p>Best Offers</p>
+                                </div>
+                                <div class="elimentor-content-details">
+                                    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="elimentor-content-box">
+                            <div class="elimentor-content-box-iiner">
+                                <div class="elimentor-content-image">
+                                    <img src="/assets/images/lock-free-img.png">
+                                </div>
+                                <div class="elimentor-content-heading">
+                                    <p>Secure Payments</p>
+                                </div>
+                                <div class="elimentor-content-details">
+                                    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

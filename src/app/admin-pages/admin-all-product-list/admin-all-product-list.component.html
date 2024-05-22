@@ -1,0 +1,76 @@
+<div id="user-main">
+    <div class="user-filter">
+        <div class="user-filter-inner">
+            <div class="filter-search">
+                <input type="search" placeholder="Product id..." #searchbox (keyup)="searchProduct($event)" (blur)="close()">
+                <!-- <span><i class="fa-solid fa-magnifying-glass"></i></span> -->
+                <button (click)="submitSearch(searchbox.value)"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <ul class="searchresult" [class.searchresultview]="searchresultkeyup">
+                    <li *ngFor="let searchResult of searchresults">
+                        <a [routerLink]="['/products-details',searchResult.id]">{{searchResult.product_name}}  madnafawf</a>
+                        <!-- mousedown event used because blur event apply under input search-->
+                    </li>
+                   
+                </ul>
+            </div>
+            
+            <div class="filter-title">
+                <p>product list</p>
+            </div>
+            
+
+
+        </div>
+    </div>
+    <div class="user-list">
+        <div class="user-list-inner">
+            <div class="table">
+                <table class="user-table-inner">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Id</th>
+                            <th>product name</th>
+                            <th>product price</th>
+                            <th>product colour</th>
+                            <th>product category</th>
+                            <th>dealerID</th>
+                            <th>action</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let porductList of porductLists ">
+                        <!-- <tr *ngFor="let porductList of porductLists | paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index"> -->
+                            <td>1</td>
+                            <!-- <td>{{i+1+(tablesize*(currentpage-1))}}</td> -->
+                            <td>{{porductList.id}}</td>
+                            <td>{{porductList.product_name}}</td>
+                            <td>{{porductList.product_price}}</td>
+                            <td>{{porductList.product_colour}}</td>
+                            <td>{{porductList.product_category}}</td>
+                            <td>{{porductList.dealerID}}</td>
+                            <td>
+                                <a style="color: #000;" title="Profile">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <!-- <a style="color: #000;" title="Profile"
+                                    [routerLink]="['/admin/admin-user-list/admin-profile',admin.id]">
+                                    <i class="fa-solid fa-user"></i>
+                                </a> -->
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <!-- <pagination-controls (pageChange)="currentpage=$event">
+
+                </pagination-controls> -->
+
+            </div>
+        </div>
+    </div>
+</div>

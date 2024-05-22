@@ -1,0 +1,125 @@
+<div id="main">
+   
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Seller profile</h2>
+            <ul>
+                <li>
+                    <h5>Name: <p>
+                            {{dealersDetails?.firstname|uppercase}}&nbsp;{{dealersDetails?.lastname|uppercase}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>Id: <p>
+                            {{dealersDetails?.id}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>Deller: <p>
+                            {{dealersDetails?.deller}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5>createdOn Profile: <p>
+                            {{dealersDetails?.createdOn}}
+                        </p>
+                    </h5>
+                </li>
+                <li>
+                    <h5 *ngIf="logTelecaller">password: <p>
+                            {{dealersDetails?.password}}
+                        </p>
+                    </h5>
+                </li>
+
+
+            </ul>
+        </aside>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <img src="" alt="Profile Image" class="profile-image">
+            </section>
+            <section id="skills">
+                <h2>Address</h2>
+                <ul>
+                    <li>
+                        <h5>
+                            <p>
+                                {{dealersDetails?.address}}
+                            </p>
+                        </h5>
+                    </li>
+
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <h5>Email: <p>
+                        {{dealersDetails?.email}}
+                    </p>
+                </h5>
+
+                <h5>Phone no: <p>
+                        {{dealersDetails?.phone}}
+                    </p>
+                </h5>
+                <h5>work phone no: <p>
+                        {{dealersDetails?.workphone}}
+                    </p>
+                </h5>
+            </section>
+            <section id="buttons" *ngIf="logTelecaller">
+                <button style="background-color: green ; color: #fff;" [routerLink]="['/seller/seller-update-details',dealersDetails?.id]">edit</button>
+                <button style="background-color: red ; color: #fff;" *ngIf="logseller">delete</button>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <header>
+        <h1>User Profile</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Write something about yourself here.</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: user@example.com</p>
+                <p>Phone: 123-456-7890</p>
+            </section>
+        </main>
+    </div> -->

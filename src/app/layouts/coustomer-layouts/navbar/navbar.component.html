@@ -1,0 +1,52 @@
+<div id="main">
+
+    <div class="nav">
+        <div class="nav-inner">
+            <div class="nav-items">
+                <div class="nav-item">
+                    <div class="nav-logo">
+                        <a [routerLink]="['/app-home']"> <img src="/assets/images/logo@2x-free-img.png"></a>
+
+                    </div>
+
+
+                </div>
+                <div class="nav-item">
+                    <div class="nav-list">
+                        <ul>
+                            <li>
+                                <a  [routerLink]="['products']" >produtc</a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['about']">about</a>
+                            </li>
+                            <li>
+                                <a>contact</a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/user-myOrder-list']">  &nbsp;<i class="fa-solid fa-bag-shopping"></i> my orders</a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/add-to-cart']">  &nbsp;<i class="fa-solid fa-bag-shopping"></i> ({{cartTotalItems}})</a>
+                            </li>
+                           
+                            <li>
+                                <a (click)="menufuncion()"><i class="fa-solid fa-user"></i></a>
+                            </li>
+                        </ul>
+                        <div class="drop-down" [ngClass]="{'app-nav':login}">
+                            <ul class="drop-down-inner">
+                                <li> <a [routerLink]="['/login-page-layout/loginpage']">log in</a> </li>
+                                <li> <a [routerLink]="['/admin']">admin</a> </li>
+                                <li> <a [routerLink]="['/seller/seller-dashboard']">seller</a> </li>
+                            </ul>
+
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
