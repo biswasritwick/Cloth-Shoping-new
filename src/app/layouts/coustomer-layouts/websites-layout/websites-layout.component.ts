@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./websites-layout.component.css']
 })
 export class WebsitesLayoutComponent {
+  sidenavstatus:boolean=false
 
 }

@@ -1,5 +1,7 @@
 <main>
-    <app-navbar></app-navbar>
+    <app-navbar (sidenavbar)="sidenavstatus=$event"></app-navbar>
+    <app-mobile-nav [sidenavstatus]="sidenavstatus"
+    [ngClass]="{'app-sidenav':sidenavstatus}"></app-mobile-nav>
     <div class="website-layout-content">
 
         <router-outlet></router-outlet>

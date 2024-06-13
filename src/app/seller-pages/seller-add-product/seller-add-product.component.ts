@@ -29,7 +29,7 @@ export class SellerAddProductComponent {
   }
 
   private afterLogin() {    // which type of user 
-    let usertype = localStorage.getItem('userType')
+    // let usertype = localStorage.getItem('userType')
     this.dealersService.logData()
     this.dealersService.sellerLogData.subscribe({
       next: (value: any) => {
@@ -50,8 +50,6 @@ export class SellerAddProductComponent {
   }
 
   addUserdata(data: sellerProduct) {
-
-
     this.isFormSubmit = true
     let date = new Date()  //date stamp
     var da = date.toLocaleDateString()    //date stamp

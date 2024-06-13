@@ -340,7 +340,22 @@
       "quantity": 100
     }
   ],
-  "cart_product": [],
+  "cart_product": [
+    {
+      "id": "ac2b",
+      "product_name": "Nayra Cut Kurti Women ",
+      "product_price": "899",
+      "product_colour": "black",
+      "product_category": "kurti",
+      "product_details": "Nayra Cut Kurti Women and Girl's Rayon Printed Single Fesival Nayra Cut Kurti",
+      "product_image_link": "https://m.media-amazon.com/images/I/51Sj1iVgK2L._AC_UY1100_.jpg",
+      "createdOn": "3/5/2024",
+      "dealerID": "3b4c",
+      "quantity": 1,
+      "productId": "f798",
+      "coustomerId": "6dfc"
+    }
+  ],
   "orders_product": [
     {
       "id": "2c4e",

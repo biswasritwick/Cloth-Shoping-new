@@ -22,3 +22,26 @@ app-footer{
     margin-top: auto;
     /* border: 1px solid black; */
 }
+app-mobile-nav {
+    width: 0%;
+    height: calc(100vh - 90px);
+    /* border: 1px solid black; */
+    right: 0;
+    position: fixed;
+    top: 90px;
+    z-index: 99;
+    background-color: #ffffffbf;
+
+    transition: width 1s ease-out;
+
+
+}
+
+.app-sidenav {
+    width: 90%;
+    transition: width 1s ease-in;
+
+    display: inline-block;
+
+
+}

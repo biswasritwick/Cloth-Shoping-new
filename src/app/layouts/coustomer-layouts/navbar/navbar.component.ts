@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { coustomerData } from 'src/app/datatyps';
 import { CoustomerService } from 'src/app/services/coustomer.service';
 import { DealerServiceService } from 'src/app/services/dealer-service.service';
@@ -9,10 +9,13 @@ import { DealerServiceService } from 'src/app/services/dealer-service.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Output() sidenavbar = new EventEmitter<boolean>()     
+
   public login = false
   public cartTotalItems: number = 0
   public coustomerDetails: any = [];
   public coustomerId: string = '';
+  menustatus: boolean = false;    // menustatus for side nav
 
   constructor(private dealerService: DealerServiceService, private coustomerService: CoustomerService) { }
   ngOnInit() {
@@ -31,7 +34,12 @@ export class NavbarComponent {
       }
     })
   }
+  sidenav() {   // sidenav open click function
+    this.menustatus = !this.menustatus
+    this.sidenavbar.emit(this.menustatus)
+    // console.warn('click sidenav btn');
 
+  }
 
   public menufuncion() {
     this.login = !this.login

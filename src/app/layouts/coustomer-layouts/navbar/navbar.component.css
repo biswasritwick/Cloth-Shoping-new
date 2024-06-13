@@ -85,7 +85,7 @@
 
 .drop-down {
     background-color: #fff;
-   overflow: hidden;
+    overflow: hidden;
     position: absolute;
     top: 90px;
     right: 12px;
@@ -108,15 +108,18 @@
             width: 100px;
             /* border: 1px solid black; */
         }
+
         li:hover {
             background-color: #000;
             border: 1px solid black;
+
             a {
                 color: #ffff;
             }
         }
     }
 }
+
 .app-nav {
     display: block;
     width: 140px;
@@ -124,4 +127,35 @@
     /* transition: ease-in-out 1s width 100s, height 100s; */
     transition: height 180ms ease-in, bottom 160ms ease-in;
 
+}
+
+.nav-btn {
+    width: 24px;
+    height: 30px;
+    right: 23px;
+    position: relative;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.900ms ease-in;
+    display: none;
+
+}
+
+.nav-btn:hover {
+    background-color: rgba(130, 128, 128, 0.558);
+    color: #fff;
+
+    transition: all 0.900ms ease-in;
+}
+
+@media (max-width:768px) {
+    .nav-btn {
+        display: inline-block;
+
+    }
+
+    .nav-list {
+        display: none;
+    }
 }
