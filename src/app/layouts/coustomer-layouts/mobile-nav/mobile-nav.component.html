@@ -1,1 +1,9 @@
-<p>mobile-nav works!</p>
+<nav>
+    <!-- <button class="side-nav" ><i class="fa-solid fa-xmark"></i></button> -->
+    <ul>
+        <li class="" *ngFor="let i of sidenav">
+            <i class="{{i.icone}}"></i>
+            <a href="" routerLink="{{i.routerlink}}">{{i.name}}</a>
+        </li>
+    </ul>
+</nav>

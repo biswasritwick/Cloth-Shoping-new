@@ -39,20 +39,19 @@ export class UserMyOrderDetailsComponent {
         console.warn(err, 'error');
       }, complete: () => {
 
-        if (this.orderDetails.dealerAcceptedOrder === true) {
+        if (this.orderDetails.orderStatus === "accepte") {
           this.statusInformation = "Seller accepte your order"
           this.deliverystatusInformation = "In process"
-
           this.statusTimeInformation = this.orderDetails.sellerOrder_stamp
-          if (this.orderDetails.deliveryOrder_stamp === false) {
-            this.deliverystatusTimeInformation = "N/A"
+
+          if (this.orderDetails.orderStatus === "delivered") {
+            this.deliverystatusTimeInformation = "delivered your order"
           } else {
-            this.deliverystatusTimeInformation = this.orderDetails.deliveryOrder_stamp
+            this.deliverystatusTimeInformation = "In process"
+            // this.deliverystatusTimeInformation = this.orderDetails.deliveryOrder_stamp
           }
 
-
-
-        } else if (this.orderDetails.dealerAcceptedOrder === "rejected") {
+        } else if (this.orderDetails.orderStatus === "reject") {
           this.statusInformation = "Seller rejecte your order"
           this.statusTimeInformation = this.orderDetails.sellerOrder_stamp
           this.deliverystatusInformation = "N/A"

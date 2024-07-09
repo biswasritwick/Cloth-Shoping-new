@@ -41,10 +41,10 @@
                     </thead>
                     <tbody>
 
-                        <tr *ngFor="let porductList of porductLists ">
-                        <!-- <tr *ngFor="let porductList of porductLists | paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index"> -->
-                            <td>1</td>
-                            <!-- <td>{{i+1+(tablesize*(currentpage-1))}}</td> -->
+                        <!-- <tr *ngFor="let porductList of porductLists;let i =index" > -->
+                        <tr *ngFor="let porductList of porductLists | paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index">
+                            <!-- <td>{{i+1}}</td> -->
+                            <td>{{i+1+(tablesize*(currentpage-1))}}</td>
                             <td>{{porductList.id}}</td>
                             <td>{{porductList.product_name}}</td>
                             <td>{{porductList.product_price}}</td>
@@ -66,9 +66,9 @@
                 </table>
             </div>
             <div class="pagination">
-                <!-- <pagination-controls (pageChange)="currentpage=$event">
+                <pagination-controls (pageChange)="currentpage=$event">
 
-                </pagination-controls> -->
+                </pagination-controls>
 
             </div>
         </div>

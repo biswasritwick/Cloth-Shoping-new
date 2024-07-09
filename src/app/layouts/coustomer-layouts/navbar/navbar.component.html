@@ -15,7 +15,7 @@
                     <div class="nav-list">
                         <ul>
                             <li>
-                                <a  [routerLink]="['products']" >produtc</a>
+                                <a [routerLink]="['products']">produtc</a>
                             </li>
                             <li>
                                 <a [routerLink]="['about']">about</a>
@@ -24,12 +24,19 @@
                                 <a>contact</a>
                             </li>
                             <li>
-                                <a [routerLink]="['/user-myOrder-list']">  &nbsp;<i class="fa-solid fa-bag-shopping"></i> my orders</a>
+                                <a [routerLink]="['/user-myOrder-list']"> &nbsp;
+                                    <i class="fa-solid fa-bag-shopping">
+
+                                    </i>
+                                    my orders
+                                </a>
                             </li>
                             <li>
-                                <a [routerLink]="['/add-to-cart']">  &nbsp;<i class="fa-solid fa-bag-shopping"></i> ({{cartTotalItems}})</a>
+                                <a [routerLink]="['/add-to-cart']"> &nbsp;
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    ({{cartTotalItems}})</a>
                             </li>
-                           
+
                             <li>
                                 <a (click)="menufuncion()"><i class="fa-solid fa-user"></i></a>
                             </li>
@@ -41,9 +48,12 @@
                                 <li> <a [routerLink]="['/seller/seller-dashboard']">seller</a> </li>
                             </ul>
 
-                          
+
                         </div>
                     </div>
+                    <a class="nav-btn" [routerLink]="['/add-to-cart']"> &nbsp;
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        ({{cartTotalItems}})</a>
                     <button type="button" (click)="sidenav()" class="nav-btn">
                         <i class="fa-solid fa-bars"></i>
                     </button>

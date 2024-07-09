@@ -84,7 +84,7 @@
 }
 
 .drop-down {
-    background-color: #fff;
+    background-color: #fafafa;
     overflow: hidden;
     position: absolute;
     top: 90px;
@@ -95,7 +95,7 @@
     transition: height 160ms ease-in;
     transition: height 1400ms ease-in, bottom 1600ms ease-in;
 
-
+z-index: 99;
 
 
     .drop-down-inner {

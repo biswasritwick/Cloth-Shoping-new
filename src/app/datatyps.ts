@@ -123,6 +123,7 @@ export interface coustomerorderProduct {
    productOrder_stamp:string,
    sellerOrder_stamp:string|boolean,
    deliveryOrder_stamp:string|boolean,
-   dealerAcceptedOrder:boolean|string
-   deliveryOrder:boolean
+   orderStatus: 'reject'|'accepte'|'process'|'delivered'
+//    dealerAcceptedOrder:boolean|string
+//    deliveryOrder:boolean
 }

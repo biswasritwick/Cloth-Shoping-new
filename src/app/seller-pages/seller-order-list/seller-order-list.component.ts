@@ -19,40 +19,32 @@ export class SellerOrderListComponent {
   reject = false
 
 
-  constructor(private dealerService: DealerServiceService, private productService: ProductService) { }
+  constructor(private productService: ProductService) { }
   ngOnInit() {
     this.dashboardAllitemsLength()
   }
 
   public dashboardAllitemsLength() {
     let sellerID = localStorage.getItem('seller')
-
-
-    this.productService.getsellerorderList(sellerID).subscribe({
+    this.productService.getsellerorderList(sellerID).subscribe({     //coustomer orderProduct api list service called
       next: (result: any) => {
+        console.log(result);
+
         let acceptedValue = result
-        let rejectvalus = result
-        acceptedValue = acceptedValue.filter((value: any) => value.dealerAcceptedOrder === false)
+        // let rejectvalus = result
+        acceptedValue = acceptedValue.filter((value: any) =>
+          value.orderStatus === "process")
         this.coustomerOrderedProduts = acceptedValue
         console.warn(acceptedValue);
-
-        // rejectvalus=rejectvalus.filter((value:any)=>value.dealerAcceptedOrder===true  )
-        // this.coustomerOrderedProduts1 = rejectvalus 
-
-
       }, error: (err) => {
         console.warn(err, 'error');
 
       }, complete: () => {
 
-
-
-
-
       }
     })
   }
-  addcptProduct(value: any) {
+  public addcptProduct(value: any) {
 
     this.productService.getOrderProduct(value).subscribe({
       next: (res) => {
@@ -73,7 +65,7 @@ export class SellerOrderListComponent {
         var dateTime = date.toLocaleString()    //date stamp
         let data = {
           ...this.sellerResponce,
-          "dealerAcceptedOrder": true,
+          "orderStatus": 'accepte',
           "sellerOrder_stamp": dateTime,
 
         }
@@ -93,7 +85,7 @@ export class SellerOrderListComponent {
     })
 
   }
-  rejectProduct(value: any) {
+  public rejectProduct(value: any) {
 
     this.productService.getOrderProduct(value).subscribe({
       next: (res) => {
@@ -111,11 +103,11 @@ export class SellerOrderListComponent {
 
       }, complete: () => {
         let date = new Date()  //date stamp
-    var dateTime = date.toLocaleString()    //date stamp
+        var dateTime = date.toLocaleString()    //date stamp
         let data = {
           ...this.sellerResponce,
-          "dealerAcceptedOrder": 'rejected',
-          "sellerOrder_stamp": dateTime,
+          "orderStatus": 'reject',   //order reject
+          "sellerOrder_stamp": dateTime, //order reject time
         }
         console.warn(data);
         this.productService.updatesellerorderList(data).subscribe({

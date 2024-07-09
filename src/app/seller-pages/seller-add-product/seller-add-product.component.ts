@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Dealersdata, sellerProduct } from 'src/app/datatyps';
@@ -10,7 +10,7 @@ import { DealerServiceService } from 'src/app/services/dealer-service.service';
   templateUrl: './seller-add-product.component.html',
   styleUrls: ['./seller-add-product.component.css']
 })
-export class SellerAddProductComponent {
+export class SellerAddProductComponent implements OnInit {
   public service: any;
   public application: any;
   public sellerCheck = true

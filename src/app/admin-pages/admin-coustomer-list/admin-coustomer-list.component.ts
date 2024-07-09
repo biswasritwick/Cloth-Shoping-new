@@ -11,6 +11,11 @@ export class AdminCoustomerListComponent {
   public Coustomers: coustomerData[] = []
 
   constructor(private coustomerService: CoustomerService) { }
+  
+  // pagination---------------
+  public currentpage: number = 1;
+  public count: number = 0;
+  public tablesize: number = 8;
 
   ngOnInit() {
     this.getCoustomerAlllist()

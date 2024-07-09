@@ -126,7 +126,7 @@ export class ProductService {
     let myapi = `${this.coustomerOrderApi}?coustomerId=`
     return this.Httpclient.get<coustomerorderProduct[]>(myapi+coustomerid)
   }
-  public getcoustomerOrderProduct(id: any) {  //when coustomer click your order thorw view order
+  public getcoustomerOrderProduct(id: any) {      //when coustomer click your order thorw view order
     let myapi = `${this.coustomerOrderApi}/${id}`
     return this.Httpclient.get<coustomerorderProduct>(myapi)
 

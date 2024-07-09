@@ -11,6 +11,7 @@ import { DealerServiceService } from 'src/app/services/dealer-service.service';
 })
 export class AdminAllProductListComponent {
   constructor(private adminservice: AdminServiceService, private dealerService: DealerServiceService) { }
+
   public porductLists: any | undefined[] = []
   private subscriptions: Subscription[] = [];
   public pass = true
@@ -18,10 +19,11 @@ export class AdminAllProductListComponent {
   public searchresults: undefined | sellerProduct[]
   public searchresultkeyup: boolean = true;
 
+// pagination---------------
   public currentpage: number = 1;
   public count: number = 0;
   public tablesize: number = 8;
-  public tablesizes: any = [5, 10, 15, 20, 25]
+  // public tablesizes: any = [5, 10, 15, 20, 25]
 
   // ---ngonInit---
   ngOnInit() {

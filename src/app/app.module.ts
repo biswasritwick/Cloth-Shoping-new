@@ -49,6 +49,7 @@ import { AddToCartComponent } from './cart-page/add-to-cart/add-to-cart.componen
 import { SellerOrderListDetailsComponent } from './seller-pages/seller-order-list-details/seller-order-list-details.component';
 import { UserMyOrderListComponent } from './user-pages/user-my-order-list/user-my-order-list.component';
 import { UserMyOrderDetailsComponent } from './user-pages/user-my-order-details/user-my-order-details.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 ;
 
 
@@ -104,6 +105,7 @@ import { UserMyOrderDetailsComponent } from './user-pages/user-my-order-details/
     HttpClientModule,
     CommonModule,
     JsonPipe,
+    NgxPaginationModule
  
   ],
   providers: [],

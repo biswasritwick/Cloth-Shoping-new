@@ -33,9 +33,9 @@
                             <th>Id</th>
                             <th>Image</th>
                             <th>ProductName</th>
-                            <th>Productprice</th>
-                            <th>Productcolor</th>
-                            <th>Discription</th>
+                            <th class="mob-view" >Productprice</th>
+                            <th class="mob-view" >Productcolor</th>
+                            <th class="mob-view" >Discription</th>
                             <th>Action</th>
 
                         </tr>
@@ -45,19 +45,19 @@
                     <tbody>
 
                         <tr *ngFor="let productList of productLists">
-                        <!-- <tr *ngFor="let productList of productLists| paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index ;trackBy: trackProducts"> -->
-                            <td class="">{{productList.id}}</td>
+                            <!-- <tr *ngFor="let productList of productLists| paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index ;trackBy: trackProducts"> -->
+                            <td >{{productList.id}}</td>
                             <td class="img">
                                 <img [src]="productList.product_image_link" alt="Product 1">
                             </td>
-                            <td class="">{{productList.product_name}}</td>
-                            <td class="">Rs: {{productList.product_price}}</td>
-                            <td class="">
+                            <td style="max-width: 200px;" >{{productList.product_name}}</td>
+                            <td  class="mob-view" >Rs: {{productList.product_price}}</td>
+                            <td  class="mob-view" >
                                 <p class="color" [style.backgroundColor]="productList.product_colour"
                                     title="{{productList.product_colour}}"></p>
                             </td>
-                            <td class="">{{productList.product_details}}</td>
-                            <td class="">
+                            <td class="mob-view"  style="max-width: 530px;" >{{productList.product_details}}</td>
+                            <td >
                                 <a type="button">
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
@@ -70,6 +70,15 @@
 
 
                         </tr>
+                        <!-- <tr>
+                            <td>ad</td>
+                            <td>ddddddd</td>
+                            <td>dddddddddddddddddddddddddddddddddddddddd</td>
+                            <td>ddddddddddd</td>
+                            <td>ddddddd</td>
+                            <td>dfsefssssssssssssssssssssssss</td>
+                            <td>dddddddddddddsssssssssssssssssssssssssssssss</td>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>

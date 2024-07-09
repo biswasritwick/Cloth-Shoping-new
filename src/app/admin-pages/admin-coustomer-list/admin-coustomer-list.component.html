@@ -19,6 +19,7 @@
                 <table class="user-table-inner">
                     <thead>
                         <tr>
+                            <th>No  </th>
                             <th>id  </th>
                             <th>name</th>
                             <th>email</th>
@@ -30,7 +31,9 @@
 
                     </thead>
                     <tbody>
-                        <tr *ngFor="let Coustomer of Coustomers"> 
+                        <tr *ngFor="let Coustomer of Coustomers| paginate:{itemsPerPage:tablesize,currentPage:currentpage}; let i =index"> 
+                            <td>{{i+1+(tablesize*(currentpage-1))}}</td>
+
                             <td>{{Coustomer.id}}</td>
                             <td>{{Coustomer.name}}</td>
                             <td>{{Coustomer.email}}</td>
@@ -49,7 +52,11 @@
                     </tbody>
                 </table>
             </div>
-            <div class="pagination"></div>
+            <div class="pagination">
+                <pagination-controls (pageChange)="currentpage=$event">
+
+                </pagination-controls>
+            </div>
         </div>
     </div>
 </div>

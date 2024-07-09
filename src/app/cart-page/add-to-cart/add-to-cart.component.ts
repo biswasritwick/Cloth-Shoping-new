@@ -135,14 +135,13 @@ export class AddToCartComponent {
 
     }
   }
-  public orderPlased() {
+  public orderPlased() {    //after order plased
 
     let user = localStorage.getItem('coustomer')
     let address = localStorage.getItem('orderAddress')
     let date = new Date()  //date stamp
     var dateTime = date.toLocaleString()    //date stamp
 
-    // console.warn(address);
     if (this.coustomercartProduts) {
       if (user && address) {
         let addres = JSON.parse(address)
@@ -161,8 +160,9 @@ export class AddToCartComponent {
             "productOrder_stamp": dateTime,
             "sellerOrder_stamp": false,
             "deliveryOrder_stamp": false,
-            "dealerAcceptedOrder": false,
-            "deliveryOrder": false,
+            "orderStatus":'process',
+            // "dealerAcceptedOrder": false,
+            // "deliveryOrder": false,
             "address": addres
           }
           console.warn(orders);
